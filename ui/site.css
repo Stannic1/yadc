@@ -2,7 +2,11 @@
 /* Reset for all element's padding and margins */
 * { padding: 0; margin: 0; }
 body {
-    background-color: #314A53;
+    background-color: #314A53 !important;
+}
+
+a {
+    transition: 0.3s;
 }
 
 
@@ -25,9 +29,37 @@ body {
 .tertiary2 { background-color: #CDD09C; }
 .tertiary3 { background-color: #A5A96C; }
 
+.NavItem {
+    display: inline-block;
+    line-height: 80px;
+    font-size: 22px;
+    padding: 0px 10px;
+    color: white !important;
+    border-left: 1px #9F6671 solid;
+    border-right: 1px #9F6671 solid;
+    margin-right: -5px;
+    transition: 0.3s;
+}
+    .NavItem:hover {
+        background-color: #6B3741;
+    }
 
+.NavBarTitle {
+    display: inline-block;
+    line-height: 80px;
+    color: white;
+    font-size: 42px;
+    padding: 0px 20px;
+}
 
 /****** IDs ******/
-#DivList {
-    background-color: #FFFFFF;
+
+#NavBar {
+    background-color: #7B4751;
+    height:80px;
+}
+
+#NavItems {
+    display: inline-block;
+    vertical-align: top;
 }

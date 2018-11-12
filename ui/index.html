@@ -4,32 +4,68 @@
 <head>
     <meta charset="utf-8">
     <title>YADC: Young Aspirant Developers Contest</title>
+
+    <!-- Style Links -->
     <link rel="stylesheet" type="text/css" href="site.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 </head>
 
 <body>
     <div id="MainContentWrapper">
         <div id="MainContent">
-            <div id="DivList">
-                <div class="PreviewCol">
-                    <h2>Primary Colors:</h2>
-                    <div class="primary square"></div>
-                    <div class="primary3 square"></div>
-                    <div class="primary2 square"></div>
+            <!-- My Navbar
+            <div id="NavBarWrapper">
+                <div id="NavBar">
+                    <p class="NavBarTitle"><i class="far fa-question-circle" style="margin-right: 10px;"></i>YADC</p>
+                    <ul id="NavItems">
+                        <a href="Home" class="NavItem"><i class="fas fa-home"></i> Home</a>
+                        <a href="SignIn" class="NavItem"><i class="fas fa-sign-in-alt"></i> Sign-in</a>
+                    </ul>
                 </div>
-                <div class="PreviewCol">
-                    <h2>Secondary Colors:</h2>
-                    <div class="secondary square"></div>
-                    <div class="secondary3 square"></div>
-                    <div class="secondary2 square"></div>
+            </div>-->
+
+            <!-- Bootstrap NavBar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="PreviewCol">
-                    <h2>Tertiary Colors:</h2>
-                    <div class="tertiary square"></div>
-                    <div class="tertiary3 square"></div>
-                    <div class="tertiary2 square"></div>
-                </div>
-            </div>
+                </nav>
         </div>
     </div>
 </body>
