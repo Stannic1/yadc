@@ -1,22 +1,20 @@
 /****** Built-in Elements ******/
 /* Reset for all element's padding and margins */
-* { padding: 0; margin: 0; }
+
+/* * { padding: 0; margin: 0; }
 body {
-    background-color: #314A53 !important;
+    background-color: #0F292F !important;
 }
 
 a {
-    transition: 0.3s;
-}
+    transition: 0.5s;
+} */
 
 
 /****** Classes ******/
-.square {
-    width: 50px;
-    height: 50px;
-}
 
 /* Site Colors */
+/*
 .primary { background-color: #7B4751; }
 .primary2 { background-color: #C4939D; }
 .primary3 { background-color: #9F6671; }
@@ -27,39 +25,45 @@ a {
 
 .tertiary { background-color: #7F824B; }
 .tertiary2 { background-color: #CDD09C; }
-.tertiary3 { background-color: #A5A96C; }
+.tertiary3 { background-color: #A5A96C; }*/
+
+/* .primary { color: #14A098; }
+    .primary-dark { color: #0F292F; }
+.secondary { color: #CB2D6F; }
+    .secondary-dark { color: #501F3A; }
+.text { color: #CCCCCC; }
+
+.bg-light {
+    background-color: #CCCCCC !important;
+} */
+
+/* .NavBarTitle {
+    display: inline-block;
+    color: #CCCCCC; 
+    line-height: 70px;
+    font-size: 32px;
+    margin-right: 20px;
+}
 
 .NavItem {
-    display: inline-block;
-    line-height: 80px;
-    font-size: 22px;
+    color: #CCCCCC;
+    line-height: 70px;
+    font-size: 20px;
     padding: 0px 10px;
-    color: white !important;
-    border-left: 1px #9F6671 solid;
-    border-right: 1px #9F6671 solid;
-    margin-right: -5px;
-    transition: 0.3s;
 }
     .NavItem:hover {
-        background-color: #6B3741;
-    }
-
-.NavBarTitle {
-    display: inline-block;
-    line-height: 80px;
-    color: white;
-    font-size: 42px;
-    padding: 0px 20px;
-}
+        color: #14A098;
+    } */
 
 /****** IDs ******/
-
-#NavBar {
-    background-color: #7B4751;
-    height:80px;
+/* #NavBar {
+    height: 70px;
+    padding: 0px 20px;
+    background-color: #0F292F
 }
 
-#NavItems {
+#NavList {
     display: inline-block;
     vertical-align: top;
-}
+} */
+
