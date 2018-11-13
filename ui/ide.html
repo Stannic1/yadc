@@ -41,10 +41,10 @@
         </ul>
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <span class="navbar-text" style="margin-right: 10px;" >Welcome, User!</span>
+            <span class="navbar-text" style="margin-right: 10px;">Welcome, User!</span>
           </li>
           <li class="nav-item">
-            <a class="btn btn-secondary" href="settings-user.html" style="margin-right: 10px;"><i class="fas fa-cog"></i></a>
+            <a class="btn btn-secondary" href="#" style="margin-right: 10px;"><i class="fas fa-cog"></i></a>
           </li>
           <li class="nav-item">
             <a class="btn btn-success" href="index.html"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
@@ -54,19 +54,36 @@
     </nav>
   </div>
 
-  <div id="MainContentWrapper">
-    <div class="container-fluid" style="margin: 10px 0px;">
-      <div class="jumbotron">
-        <h1 class="display-4">Welcome to YADC!</h1>
-        <p class="lead">Get started or continue working on your contest!</p>
-        <hr class="my-4">
-        <a class="btn btn-success btn-lg" href="#" role="button"><i class="fas fa-terminal"></i> Contest Problems</a>
+  <div id="MainContentWrapper" style="min-height: 100%;">
+    <div class="container-fluid">
+      <div class="row" id="IDEGrid">
+        <div class="col-sm">
+          <br>
+          <a class="btn btn-primary" href="index-signedin.html"><i class="fas fa-arrow-left"></i> Return to Problems</a>
+          <h2>Question #1</h2>
+          <hr>
+          <h4>Fibonacci Numbers</h4>
+          <p class="text">Write a function that computes the list of the first 100 Fibonacci numbers. By definition, the first two numbers in the
+          Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two. As an example, here are the
+          first 10 Fibonnaci numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, and 34.</p>
+        </div>
+        <div class="col-sm" style="padding: 0">
+          <div class="container-fluid h-50 bg-secondary" style="padding: 0">
+            <h3 style="padding: 10px;">Code your solution here</h3>
+            <hr style="margin: 0px 0px 5px 0px">
+          </div>
+          <div class="container-fluid h-50 text-light bg-primary" style="padding: 0">
+            <h3 style="padding: 5px 10px;">Compile and run your code</h3>
+            <hr style="margin: 0px 0px 5px 0px">
+            <p style="padding: 10px;">user@bash:~$ █</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
 
-  <!-- Optional JavaScript -->
+  
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -75,6 +92,14 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+
+  <!-- Optional JavaScript -->
+  <script>
+    $(document).ready(function () {
+      $("#IDEGrid").css("height", window.innerHeight + "px");   // Set the height of the IDE div using the window's inner height
+    });
+  </script>
+  
 </body>
 
 </html>

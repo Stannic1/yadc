@@ -32,11 +32,11 @@
 
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index-signedin.html"><i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="scoreboard.html"><i class="fas fa-star"></i> Scoreboard</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><i class="fas fa-star"></i> Scoreboard</a>
           </li>
         </ul>
         <ul class="navbar-nav navbar-right">
@@ -44,7 +44,7 @@
             <span class="navbar-text" style="margin-right: 10px;" >Welcome, User!</span>
           </li>
           <li class="nav-item">
-            <a class="btn btn-secondary" href="settings-user.html" style="margin-right: 10px;"><i class="fas fa-cog"></i></a>
+            <a class="btn btn-secondary" href="#" style="margin-right: 10px;"><i class="fas fa-cog"></i></a>
           </li>
           <li class="nav-item">
             <a class="btn btn-success" href="index.html"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
@@ -55,13 +55,78 @@
   </div>
 
   <div id="MainContentWrapper">
-    <div class="container-fluid" style="margin: 10px 0px;">
-      <div class="jumbotron">
-        <h1 class="display-4">Welcome to YADC!</h1>
-        <p class="lead">Get started or continue working on your contest!</p>
-        <hr class="my-4">
-        <a class="btn btn-success btn-lg" href="#" role="button"><i class="fas fa-terminal"></i> Contest Problems</a>
+    <div class="container" style="margin-top: 10px;">
+      <h2 class="text-center">Contest Scoreboard</h2>
+      <div class="container text-right">
+        <h5 class="align-middle" style="display: inline-block; margin-right: 10px;">Select Contest: </h5>
+        <div class="dropdown" style="display: inline-block;">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            High School Contest 1
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">High School Contest 2</a>
+            <a class="dropdown-item" href="#">Middle School Contest 1</a>
+            <a class="dropdown-item" href="#">Middle School Contest 2</a>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="container" style="padding-top: 20px;">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Position</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">School</th>
+            <th scope="col">Contest</th>
+            <th scope="col">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-success">
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>Amarillo High School</td>
+            <td>High School Contest 1</td>
+            <td>100/100</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Molly</td>
+            <td>Thornton</td>
+            <td>Canyon High School</td>
+            <td>High School Contest 1</td>
+            <td>95/100</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>Bird</td>
+            <td>Amarillo High School</td>
+            <td>High School Contest 1</td>
+            <td>80/100</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Alex</td>
+            <td>Mann</td>
+            <td>Amarillo High School</td>
+            <td>High School Contest 1</td>
+            <td>80/100</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Logan</td>
+            <td>Brown</td>
+            <td>Canyon High School</td>
+            <td>High School Contest 1</td>
+            <td>70/100</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
