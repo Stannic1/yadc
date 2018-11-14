@@ -29,16 +29,16 @@
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="index-signedin.html"><i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="ide.html"><i class="fas fa-code"></i> IDE</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="problems.html"><i class="fas fa-stream"></i> Problems</a>
           </li>
           <li class="nav-item">
@@ -60,44 +60,33 @@
     </nav>
   </div>
 
-  <div id="MainContentWrapper" style="min-height: 100%;">
-    <div class="container-fluid">
-      <div class="row" id="IDEGrid">
-        <div class="col-sm">
-          <br>
-          <a class="btn btn-primary btn-sm" href="problems.html"><i class="fas fa-arrow-left"></i> Return to Problems</a>
-          <h2 style="margin-top: 20px;">Question #1</h2>
-          <hr>
-          <h4>Fibonacci Numbers</h4>
-          <p class="text">Write a function that computes the list of the first 100 Fibonacci numbers. By definition, the first two numbers in the
-          Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two. As an example, here are the
-          first 10 Fibonnaci numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, and 34.</p>
-          <br>
-          <h4>Requirements</h4>
-          <ol>
-            <li>Must solve the problem recursively</li>
-            <li>No "while (true)" loops allowed</li>
-            <li>Another requirement</li>
-            <li>Yet another one...</li>
-          </ol>
-        </div>
-        <div class="col-sm" style="padding: 0">
-          <div class="container-fluid h-50 bg-secondary" style="padding: 0">
-            <h3 style="padding: 10px;">Code your solution here</h3>
-            <hr style="margin: 0px 0px 5px 0px">
-          </div>
-          <div class="container-fluid h-50 text-light bg-primary" style="padding: 0">
-            <h3 style="padding: 5px 10px;">Compile and run your code</h3>
-            <hr style="margin: 0px 0px 5px 0px">
-            <p style="padding: 10px;">user@bash:~$█</p>
-          </div>
-        </div>
+  <div id="MainContentWrapper">
+    <div class="container" style="margin-top: 20px;">
+      <h2>Problem List</h2>
+      <hr>
+      <h3>High School Contest 1 Problems</h3>
+      <div class="list-group">
+        <a href="ide.html" class="list-group-item list-group-item-success">Printing "Hello, World!" <span class="badge badge-primary badge-pill">5/5</span></a>
+        <a href="ide.html" class="list-group-item list-group-item-success">Simple Math <span class="badge badge-primary badge-pill">5/5</span></a>
+        <a href="ide.html" class="list-group-item list-group-item-success">Variables <span class="badge badge-primary badge-pill">10/10</span></a>
+        <a href="ide.html" class="list-group-item list-group-item-warning">Functions <span class="badge badge-primary badge-pill">10/20</span></a>
+        <a href="ide.html" class="list-group-item list-group-item-secondary">Recursion <span class="badge badge-primary badge-pill">0/20</span></a>
+        <a href="ide.html" class="list-group-item list-group-item-secondary">Classes <span class="badge badge-primary badge-pill">0/20</span></a>
+        <a href="ide.html" class="list-group-item list-group-item-secondary">File Handling <span class="badge badge-primary badge-pill">0/20</span></a>
+        <a href="ide.html" class="list-group-item list-group-item-secondary">Threads <span class="badge badge-primary badge-pill">0/20</span></a>
+      </div>
+      <hr>
+      <h4>Contest Progress: 30/120 points</h4>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="25"
+          aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
       </div>
     </div>
+    
   </div>
 
 
-  
+  <!-- Optional JavaScript -->
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -106,14 +95,6 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-
-  <!-- Optional JavaScript -->
-  <script>
-    $(document).ready(function () {
-      $("#IDEGrid").css("height", window.innerHeight-70 + "px");   // Set the height of the IDE div using the window's inner height
-    });
-  </script>
-  
 </body>
 
 </html>
