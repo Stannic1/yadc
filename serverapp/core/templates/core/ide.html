@@ -1,0 +1,42 @@
+{% extends 'core/layout-ide.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+  <div class="row" id="IDEGrid">
+    <div class="col-sm">
+      <br>
+      <a class="btn btn-primary btn-sm" href="problems.html"><i class="fas fa-arrow-left"></i> Return to Problems</a>
+      <h2 style="margin-top: 20px;">Question #1</h2>
+      <hr>
+      <h4>Fibonacci Numbers</h4>
+      <p class="text">Write a function that computes the list of the first 100 Fibonacci numbers. By definition, the
+        first two numbers in the
+        Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two. As an example, here
+        are the
+        first 10 Fibonnaci numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, and 34.</p>
+      <br>
+      <h4>Requirements</h4>
+      <ol>
+        <li>Must solve the problem recursively</li>
+        <li>No "while (true)" loops allowed</li>
+        <li>Another requirement</li>
+        <li>Yet another one...</li>
+      </ol>
+    </div>
+    <div class="col-sm" style="padding: 0">
+      <div class="container-fluid h-50 bg-secondary" style="padding: 0">
+        <h3 style="padding: 5px;">Code your solution here</h3>
+        <hr style="margin: 0px 0px 5px 0px">
+        <div id="editor"> USER INSERT CODE HERE </div>
+      </div>
+      <div class="container-fluid h-50 text-light bg-primary" style="padding: 0">
+        <h3 style="padding: 5px 10px;">Compile and run your code</h3>
+        <hr style="margin: 0px 0px 5px 0px">
+        <div id="terminal"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
