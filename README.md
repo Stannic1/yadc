@@ -13,6 +13,11 @@ Notes:
         django
 
 How to run:
+    1. Install dependencies
+        ./install-dependencies.sh
+
+    2. Run the web application
+        ./run.sh
     run.sh will automate some of the complexities of starting the server.
     After executing run.sh on a terminal, the application will be running on 127.0.0.1:8000 or localhost:8000
     The application can then be reached on a web browser at that address. 
