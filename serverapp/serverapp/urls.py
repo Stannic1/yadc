@@ -18,6 +18,8 @@ from django.contrib import admin
 from core import views as core_views
 
 urlpatterns = [
+    # If no path, default to index
+    url(r'^$', core_views.index, name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^signup/$', core_views.signup, name='signup'),
     url(r'^ide/$', core_views.ide, name='ide'),
