@@ -2,6 +2,9 @@
 Repository for the Young Aspirant Developer Contest
 ----------------------------------------------------------------------
 
+A Django web application used to host an online programming contest for aspiring programmers in high school.
+The project will be used as an outreach tool to engage and inspire young people to start pursuing computer science early.
+
 Compatible Platforms:
     1. Linux (Only tested on Ubuntu 16.04 & 18.04)
 
@@ -13,11 +16,8 @@ Notes:
         django
 
 How to run:
-    1. Install dependencies
-        ./install-dependencies.sh
-
-    2. Run the web application
-        ./run.sh
+    1. Install dependencies: ./install-dependencies.sh
+    2. Run the web application: ./run.sh
     run.sh will automate some of the complexities of starting the server.
     After executing run.sh on a terminal, the application will be running on 127.0.0.1:8000 or localhost:8000
     The application can then be reached on a web browser at that address. 
