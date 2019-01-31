@@ -11,8 +11,8 @@ def signup(request):
 
 def ide(request):
     if request.is_ajax():
-        code = request.POST
-        jc.postCode(code, '35')
+        code  = request.POST
+        ideIO = jc.postCode(code, '35')
     return render(request, "core/ide/ide.html")
 
 def settings(request):

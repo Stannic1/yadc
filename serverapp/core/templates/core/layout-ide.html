@@ -111,12 +111,13 @@
       var input_id = 1;
       var input_value = editor.getValue();
       form_data[input_id] = input_value;
+      getInput = document.getElementById("input");
           console.log(form_data);
 
       $.ajax({
         type: "POST",
         url: "/ide/",
-        data : {code: editor.getValue()},
+        data : {code: editor.getValue(),input: getInput},
         success : function(result) {
           console.log("Success!");
         }
