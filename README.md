@@ -2,6 +2,8 @@
 Repository for the Young Aspirant Developer Contest
 ----------------------------------------------------------------------
 
+! Features implemented for Phase 1 of development are outlined in phase1.txt !
+
 A Django web application used to host an online programming contest for aspiring programmers in high school.
 The project will be used as an outreach tool to engage and inspire young people to start pursuing computer science early.
 

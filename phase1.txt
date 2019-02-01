@@ -1,0 +1,16 @@
+Features Implemented in Phase 1:
+
+Jordan's Tasks:
+1. Database Setup:
+	This task included setting up the models for the database tables for the 
+	User, Question, Contest, and ParticipantScore tables. Models were defined in
+	django and can be viewed in yadc/serverapp/core/models.py. Models were then
+	migrated to the db.sqlite3 database and can be viewed using a sqlite tool
+	such as sqlitebrowser.
+
+2. Setup Registration:
+	This task included using the User model that was created to allow users to
+	register an account through the site. Refinement on the model for users will
+	need to be updated later, but creating an account through the signup page 
+	currently has complete functionality and created users can be viewed in the 
+	db.sqlite3 database.
