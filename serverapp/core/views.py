@@ -13,7 +13,12 @@ def ide(request):
     if request.is_ajax():
         code  = request.POST
         ideIO = jc.postCode(code, '35')
+        ideCodeAjax(request)
     return render(request, "core/ide/ide.html")
+
+def ideCodeAjax(request):
+    giveThisToUser = request.GET.get('value')
+    return HttpResponse(giveThisToUser)
 
 def settings(request):
     return render(request, 'core/settings.html')

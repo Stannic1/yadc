@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^signup/$', core_views.signup, name='signup'),
     url(r'^ide/$', core_views.ide, name='ide'),
+    url(r'^ide-ajax/$', core_views.ideCodeAjax, name='ideCodeAjax'),
     url(r'^settings/$', core_views.settings, name='settings'),
     url(r'^index/$', core_views.index, name='index'),
     url(r'^problems/$', core_views.problems, name='problems'),
