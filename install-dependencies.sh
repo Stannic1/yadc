@@ -12,3 +12,5 @@ sudo pip install --upgrade virtualenv
 source .venv/bin/activate;
 echo "Installing django"
 sudo pip install django;
+sudo pip install docker
+sudo pip install requests
