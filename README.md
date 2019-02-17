@@ -1,6 +1,9 @@
+
 # young-aspirant-developer-contest
 Repository for the Young Aspirant Developer Contest
 ----------------------------------------------------------------------
+
+! Features implemented for Phase 1 of development are outlined in phase1.txt !
 
 A Django web application used to host an online programming contest for aspiring programmers in high school.
 The project will be used as an outreach tool to engage and inspire young people to start pursuing computer science early.
@@ -24,3 +27,4 @@ How to run:
     If the shell script fails, the application can be started manually with these steps:
         1. Activate virtual environment (in yadc/): source .venv/bin/activate
         2. Run the python manager (in yadc/): python serverapp/manage.py runserver
+>>>>>>> be88eb75850d02ca1c0d8df7f334efed3f94c361

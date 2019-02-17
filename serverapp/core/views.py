@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 import os
 import json
-from django.shortcuts import render
 from django.views.decorators.clickjacking import xframe_options_exempt
 from django.views.decorators.clickjacking import xframe_options_sameorigin
 from django.views.decorators.csrf import csrf_exempt
@@ -13,12 +12,29 @@ from core.scripts import judgeCode as jc
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
+# Signup imports
+from django.contrib.auth import login, authenticate
+from django.shortcuts import render, redirect
+from .forms import SignUpForm
+
 tpid = None
 tport = None
 
 # Create your views here.
 def signup(request):
-    return render(request, 'core/signup.html')
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(email=user.email, password=raw_password)
+            login(request, user)
+            # Redirect back to index
+            return redirect('/index')
+    else:
+        form = SignUpForm()
+    return render(request, 'core/signup.html', {'form': form})
+    # return render(request, 'core/signup.html')
 
 @xframe_options_sameorigin
 def ide(request):
