@@ -1,6 +1,14 @@
+import docker
 import subprocess
 import socket
 import random
+#TODO
+# docker run 
+# docker network create on startup
+# docker connect user to that IP 
+# docker cp files from server to virtualized server
+
+
 
 MINPORT = 30000
 MAXPORT = 65000
@@ -47,7 +55,10 @@ class terminal:
     def makeServer(self):
         try:
             print("Creating server with port: " + str(self.port))
-            self.pid = subprocess.Popen(['node', 'wetty/index.js', '--sshhost', '--sshuser', str(self.ssh), '-p', str(self.port)])
+            self.pid = subprocess.Popen(['docker', 'run', '-p', 
+                                        str(self.port), ':3000', '-e', 'SIAB_PASSWORD=123', '-e', 'SIAB_SSL=False',
+                                        '-e', 'SIAB_USER=user'])
+            #self.pid = subprocess.Popen(['node', 'wetty/index.js', '--sshhost', '--sshuser', str(self.ssh), '-p', str(self.port)])
             self.running = True
             return self.port
         except Exception as e:
