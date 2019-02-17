@@ -86,4 +86,3 @@ class ParticipantScore(models.Model):
     )
     user_points = models.FloatField(unique=False, null=True, blank=False)
     total_points = models.FloatField(unique=False, null=True, blank=False)
->>>>>>> be88eb75850d02ca1c0d8df7f334efed3f94c361

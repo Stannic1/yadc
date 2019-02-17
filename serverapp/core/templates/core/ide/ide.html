@@ -32,27 +32,14 @@
         <div id="editor"># Write your python code here</div>
       </div>
       <div class="container-fluid h-50 text-light bg-primary" style="padding: 0">
-        <div class="row">
-            <div class="col align-self-start">
-                <hr style="margin: 0px 0px 5px 0px">
-              <h3 style="padding: 5px 10px;">INPUT</h3>
-              <textarea id="output" rows="12" cols="35">
-                Give the program inputs here.
-              </textarea>
-              <button type="button" class="btn btn-info buttonsubmit" id="submitbutton">Compile</button>
-            </div>
-            <div class="col">
-                <h3 style="padding: 5px 10px;">OUTPUT</h3>
-                <textarea id="output" rows="12" cols="35">
-                  program will output here
-                  </textarea>
-            </div>
-          </div>
+        <h3 style="padding: 5px 10px;">Compile and run your code</h3>
+        <hr style="margin: 0px 0px 5px 0px">
+        <iframe id="tiframe" allowtransparency="false" src ="" height="100%" width="100%">
+          Your browser doesn't support iframes. Please switch to a compatible browser.
+        </iframe>
       </div>
     </div>
   </div>
 </div>
-<head>
-</head>
 
 {% endblock %}
