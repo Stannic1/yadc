@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import os
@@ -92,3 +93,38 @@ def destroyTerminal(request):
         except Exception as e:
             print('except: ' + e)
             return HttpResponseServerError(content=b'%s' % e.message)
+=======
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from core.scripts import judgeCode as jc
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+
+# Create your views here.
+def signup(request):
+    return render(request, 'core/signup.html')
+
+def ide(request):
+    if request.is_ajax():
+        code  = request.POST
+        ideIO = jc.postCode(code, '35')
+        ideCodeAjax(request)
+    return render(request, "core/ide/ide.html")
+
+def ideCodeAjax(request):
+    giveThisToUser = request.GET.get('value')
+    return HttpResponse(giveThisToUser)
+
+def settings(request):
+    return render(request, 'core/settings.html')
+
+def index(request):
+    return render(request, 'core/index.html')
+
+def problems(request):
+    return render(request, 'core/problems.html')
+
+def scoreboard(request):
+    return render(request, 'core/scoreboard.html')
+>>>>>>> 411d5fe5ad1d3d1fb234dbfe2d4b142ebe2e9656
