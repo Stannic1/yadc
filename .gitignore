@@ -1,3 +1,5 @@
 get-pip.py
 .venv/*
 .vscode/*
+.venv/
+.vscode/
