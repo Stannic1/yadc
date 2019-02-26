@@ -4,11 +4,9 @@ import socket
 import random
 #TODO
 # docker run 
-# docker network create on startup
 # docker connect user to that IP 
 # docker cp files from server to virtualized server
-
-
+# SCREW WETTY WE'RE GOING WITH GOTTY LOL
 
 MINPORT = 30000
 MAXPORT = 65000
@@ -36,6 +34,8 @@ def getUnusedPort():
         else:
             return givePort
 
+def copyCodeToServer(usrcode):
+
 class terminal:
 
     def __init__(self, ssh, port):
@@ -44,28 +44,31 @@ class terminal:
         self.https = False
         self.ssh = ssh
         self.running = False
-        self.pid = None
+        self.docker = None
+        self.container = None
 
     def __enter__(self):
         return self
 
-    def __exit__(self, exc_type, exc_value, traceback):
+    def __exit__(self, exec_type, exc_value, traceback):
         self.pid.terminate()
 
     def makeServer(self):
         try:
             print("Creating server with port: " + str(self.port))
-            self.pid = subprocess.Popen(['docker', 'run', '-p', 
-                                        str(self.port), ':3000', '-e', 'SIAB_PASSWORD=123', '-e', 'SIAB_SSL=False',
-                                        '-e', 'SIAB_USER=user'])
-            #self.pid = subprocess.Popen(['node', 'wetty/index.js', '--sshhost', '--sshuser', str(self.ssh), '-p', str(self.port)])
+            self.docker = docker.from_env()
+            #                                CHANGE THIS TO YOUR DOCKER IMAGE NAME
+            #                                                |
+            #                                                |
+            #                                                v
+            self.container = self.docker.containers.run('fugg:latest' ,ports={self.port:7681},detach=True,remove=True)
             self.running = True
             return self.port
         except Exception as e:
             raise e
     
     def terminate(self):
-        if self.pid is not None:
+        if self.docker is not None:
             self.running = False
-            self.pid.kill()
-            self.pid = None
+            self.container.kill()
+            self.docker = None
