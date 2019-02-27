@@ -1,3 +1,0 @@
-[submodule "serverapp/wetty"]
-	path = serverapp/wetty
-	url = git@github.com:krishnasrinivas/wetty.git  
