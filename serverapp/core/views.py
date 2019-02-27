@@ -6,7 +6,7 @@ from django.views.decorators.clickjacking import xframe_options_exempt
 from django.views.decorators.clickjacking import xframe_options_sameorigin
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse, HttpResponseServerError
-import core.scripts.terminal as wetty
+import core.scripts.terminal as cotty
 from django.contrib.auth.models import User
 from core.scripts import judgeCode as jc
 from django.shortcuts import render, redirect
@@ -39,7 +39,7 @@ def signup(request):
 @xframe_options_sameorigin
 def ide(request):
     global tport
-    tport = wetty.getUnusedPort()
+    tport = cotty.getUnusedPort()
     if request.is_ajax():
         code = request.POST
         jc.postCode(code, '35')
@@ -61,7 +61,7 @@ def scoreboard(request):
 
 ###################################################
 #                                                 #
-#           HANDLING WETTY REQUESTS               #
+#           HANDLING cotty REQUESTS               #
 #                                                 #
 ###################################################
 
@@ -73,7 +73,7 @@ def makeTerminal(request):
     if request.is_ajax():
         try:
             print('allocating to user...')
-            tpid = wetty.terminal('admin', tport)
+            tpid = cotty.terminal('admin', tport)
             terminal_port = tpid.makeServer()
             return HttpResponse(str(terminal_port))
         except Exception as e:
@@ -87,7 +87,7 @@ def destroyTerminal(request):
     if request.is_ajax():
         try:
             tpid.terminate()
-            print('closed wetty server: ' + str(tport))
+            print('closed cotty server: ' + str(tport))
             return HttpResponse('')
         except Exception as e:
             print('except: ' + e)
