@@ -2,11 +2,6 @@ import docker
 import subprocess
 import socket
 import random
-#TODO
-# docker run 
-# docker connect user to that IP 
-# docker cp files from server to virtualized server
-# SCREW WETTY WE'RE GOING WITH GOTTY LOL
 
 MINPORT = 30000
 MAXPORT = 65000
@@ -34,7 +29,13 @@ def getUnusedPort():
         else:
             return givePort
 
-def copyCodeToServer(usrcode):
+def copyCodeToServer(usrcontainer, usrcode, codelang):
+    if (codelang == 35 ): #python
+        lang = '.py'
+
+    usrcontainer.container.exec_run('echo \'' + usrcode + ' \' > usrcompile' + lang )
+    print("debug message.")
+    
 
 class terminal:
 
