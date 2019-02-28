@@ -6,11 +6,11 @@ sudo apt-get install virtualenv;
 
 echo "Installing pip"
 sudo apt-get install python-pip python-dev build-essential 
-sudo pip install --upgrade pip 
-sudo pip install --upgrade virtualenv 
+sudo pip3 install --upgrade pip 
+sudo pip3 install --upgrade virtualenv 
 
 source .venv/bin/activate;
 echo "Installing django"
-sudo pip install django;
-sudo pip install docker
-sudo pip install requests
+sudo pip3 install django;
+sudo pip3 install docker
+sudo pip3 install requests
