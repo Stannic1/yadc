@@ -58,7 +58,6 @@ def problems(request):
 def scoreboard(request):
     return render(request, 'core/scoreboard.html')
 
-
 ###################################################
 #                                                 #
 #           HANDLING cotty REQUESTS               #

@@ -46,15 +46,21 @@
           </li>
         </ul>
         <ul class="navbar-nav navbar-right">
-          <li class="nav-item">
-            <span class="navbar-text" style="margin-right: 10px;">Welcome, User!</span>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-secondary" href="/settings" style="margin-right: 10px;"><i class="fas fa-cog"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-success" href="/index"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
-          </li>
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+              <span class="navbar-text" style="margin-right: 10px;">Welcome {{ user.first_name }} !</span>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-secondary" href="/settings" style="margin-right: 10px;"><i class="fas fa-cog"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-success" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="btn btn-success" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login/Sign Up</a>
+            </li>
+          {% endif %}
         </ul>
       </div>
     </nav>

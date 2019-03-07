@@ -12,4 +12,7 @@ EXPOSE 7681
 ENTRYPOINT ["ttyd"]
 
 CMD ["bash"]
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9fd8e9076a7db4a84799f49eb0d2930b193a3faf
