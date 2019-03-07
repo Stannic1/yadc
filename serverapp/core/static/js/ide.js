@@ -2,11 +2,11 @@ window.onunload = endTerminal();
 
 function start_terminal(data) {
     //fill this iframe with whats given in the variable data
-    console.log("Trying to start up server.");
+    console.log("Trying to start up server with the ip of: " + data);
     $term_iframe = $('#tiframe');
     $term_iframe.attr({
         //TEST IP.
-        'src': 'http://127.0.0.1:' + data + '/wetty/ssh/stannic',
+        'src': 'http://' + data,
         //DEPLOYED IP
         // WTAMU IP here.
     });

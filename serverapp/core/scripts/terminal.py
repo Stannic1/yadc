@@ -2,6 +2,7 @@ import docker
 import subprocess
 import socket
 import random
+import os
 
 MINPORT = 30000
 MAXPORT = 65000
@@ -47,6 +48,7 @@ class terminal:
         self.running = False
         self.docker = None
         self.container = None
+        self.address = None
 
     def __enter__(self):
         return self
@@ -62,9 +64,17 @@ class terminal:
             #                                                |
             #                                                |
             #                                                v
-            self.container = self.docker.containers.run('fugg:latest' ,ports={self.port:7681},detach=True,remove=True)
+            imagecmd = '-p ' + str(self.port) + ' bash -x'
+            self.container = self.docker.containers.run('fugg:latest',imagecmd,ports={self.port:self.port},detach=True,remove=True,network='test')
+            print("THE CONTAINER NAME IS: " + self.container.name)
             self.running = True
-            return self.port
+            cmd = " docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' " + self.container.name
+            self.address = os.popen(cmd).read()
+            machete = self.address +':'+ str(self.port)
+
+            print("the docker thing is: " + machete)
+            
+            return machete.replace('\n','')
         except Exception as e:
             raise e
     
