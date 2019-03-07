@@ -17,6 +17,10 @@ from django.conf.urls import url
 from django.contrib import admin
 from core import views as core_views
 
+# Login Logout Imports
+from django.contrib.auth import views as auth_views
+from django.urls import path, include
+
 urlpatterns = [
     # If no path, default to index
     url(r'^$', core_views.index, name='index'),
@@ -29,4 +33,5 @@ urlpatterns = [
     url(r'^index/$', core_views.index, name='index'),
     url(r'^problems/$', core_views.problems, name='problems'),
     url(r'^scoreboard/$', core_views.scoreboard, name='scoreboard'),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
