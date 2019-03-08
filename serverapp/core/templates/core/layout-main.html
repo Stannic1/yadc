@@ -35,12 +35,14 @@
           <li class="nav-item">
             <a class="nav-link" href="/index"><i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/ide"><i class="fas fa-code"></i> IDE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/problems"><i class="fas fa-stream"></i> Problems</a>
-          </li>
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="/ide"><i class="fas fa-code"></i> IDE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/problems"><i class="fas fa-stream"></i> Problems</a>
+            </li>
+          {% endif %}
           <li class="nav-item">
             <a class="nav-link" href="/scoreboard"><i class="fas fa-star"></i> Scoreboard</a>
           </li>

@@ -1,0 +1,18 @@
+Features Implemented in Phase 2:
+
+Virtual Terminal on IDE:
+    Using docker, a virtual bash terminal has been set up on the IDE page. This allows
+    the users to either program in the IDE or edit files directly in the terminal as if
+    it were a native Linux BASH terminal.
+
+Contest Question Generation:
+    Two scripts, add_questions.py and question_generation.sh are used to automate
+    the addition of contest questions to the SQLite database. add_questions.py prompts
+    the user for question information and creates a question_list.txt file with SQLite
+    friendly commands. The question list is then applied by running question_generation.sh.
+
+User Experience Changes:
+    Login / Logout feature was added to the site utilizing Django's authentication.
+    User authentication has been added to prevent users from seeing incorrect links. This
+    functionality will also be applied to preventing users from performing actions that
+    require an authenticated user.
